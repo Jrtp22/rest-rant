@@ -1,8 +1,11 @@
 //express
+require('dotenv').config();
 const express = require('express');
 
 //Initialize the app variable
 const app = express();
+
+app.use('/places', require('./controllers/places.js'))
 
 //home route and 404
 app.get('/', (req, res) => {
