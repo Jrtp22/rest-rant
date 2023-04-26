@@ -6,6 +6,7 @@ function index (data) {
       return (
         <div>
           <h2>{place.name}</h2>
+          <h5>here is cool cat pic just for fun </h5>
           <img src={place.pic} alt={place.name}/>
         </div>
       )
@@ -13,7 +14,7 @@ function index (data) {
     return (
       <Def>
           <main>
-              <h1>PLACES INDEX PAGE</h1>
+              <h1>MY kind of places</h1>
               {placesFormatted}
           </main>
       </Def>
