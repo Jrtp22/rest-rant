@@ -6,13 +6,13 @@ router.get('/', (req, res) => {
         city: 'Gotham City',
         state: 'Gotham',
         cuisines: 'What-ever Alfred feels like making',
-        pic: 'http://placekitten.com/250/250'
+        pic: '/images/fancy.jpg'
       }, {
         name: 'Arkham Asylum',
         city: 'Arkham',
         state: 'Gotham',
         cuisines: 'Cafeteria food',
-        pic: 'http://placekitten.com/250/250'
+        pic: '/images/cafe.jpg'
       }]
       
     res.render('places/index.jsx', { places } )
