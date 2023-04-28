@@ -22,7 +22,7 @@ function Def (html) {
                         </li>
                     </ul>
                 </nav>
-                {html.children}
+                <div className='container'>{html.children}</div>
             </body>
         </html>
     )
