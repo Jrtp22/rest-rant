@@ -26,5 +26,16 @@ router.get("/new", (req, res) => {
   res.render("places/new.jsx");
 });
 
+router.get('/:id', (req, res) => {
+  let id = Number(req.params.id);
+  console.log('id:', id); // log the value of `id` to the console
+  if (isNaN(id)) {
+    res.render('error404');
+  } else if (!places[id]) {
+    res.render('error404');
+  } else {
+    res.render('places/show', { place: places[id], });
+  }
+});
 
 module.exports = router
