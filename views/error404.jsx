@@ -8,11 +8,14 @@ function error404 () {
               <h1>404: PAGE NOT FOUND</h1>
               <div>
                 <img src="/images/stormtrooper.jpg" alt="Stormtrooper walking in the desert" />
-                <div>
+                <div id="underPic">
                   Photo by <a href="https://unsplash.com/@danielkcheung">Daniel K Cheung</a> on <a href="https://unsplash.com/">Unsplash</a>
                 </div>
               </div>
-              <p>Oops, sorry, we can't find this page!</p>
+              <p id="underPic">Oops, sorry, we can't find this page!</p>
+              <a className="col d-flex justify-content-center" href="/">
+                <button className="btn btn-danger">GO HOME</button>
+              </a>
           </main>
       </Def>
     )

@@ -23,6 +23,9 @@ function index (data) {
             <div className="row">
               {placesFormatted}
             </div>
+            <a className="col d-flex justify-content-center" href="/places/new">
+                <button className="btn btn-primary">Recommend Me Something</button>
+              </a>
         </main>
     </Def>
   )
