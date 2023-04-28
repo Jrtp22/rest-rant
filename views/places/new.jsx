@@ -29,7 +29,9 @@ function new_form () {
                     </div>
                     <input className="btn btn-primary" type="submit" value="Add Place" />
                 </form>
-
+                <a className="col d-flex justify-content-center" href="/places">
+                    <button className="btn btn-info">Go Back</button>
+                </a>
 
             </main>
         </Def>
