@@ -1,6 +1,6 @@
 const React = require('react')
 
-function Def (html) {
+function Def (props) {
     return (
         <html>
             <head>
@@ -22,7 +22,7 @@ function Def (html) {
                         </li>
                     </ul>
                 </nav>
-                <div className='container'>{html.children}</div>
+                <div className='container'>{props.children}</div>
             </body>
         </html>
     )
