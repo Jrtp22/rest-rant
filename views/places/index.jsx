@@ -22,18 +22,24 @@ function index (data) {
   })  
   return (
     <Def>
+      <body className="bg-info">
+      
+    
         <main>
             <h1>Places to Rant or Bat-Rant About</h1>
             <div className="row">
               {placesFormatted}
             </div>
+            {/* <div className="btn-group" role="group">
             <a className="col d-flex justify-content-center" href="/places/new">
                 <button className="btn btn-primary">Recommend Me Something</button>
             </a>
             <a className="col d-flex justify-content-center" href="/">
               <button className="btn btn-light position-absolute bottom-0">GO HOME</button>
             </a>
+            </div> */}
         </main>
+        </body>
     </Def>
   )
 }

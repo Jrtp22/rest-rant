@@ -4,6 +4,8 @@ const Def = require('./default')
 function home() {
   return (
     <Def>
+      <body className="bg-info">
+      
       <main>
         <h1>My Page</h1>
         <div>
@@ -13,10 +15,11 @@ function home() {
             on <a href="https://unsplash.com/">Unsplash</a>
           </div>
         </div>
-        <a className="col d-flex justify-content-center" href="/places">
+{/*         <a className="col d-flex justify-content-center" href="/places">
           <button className="btn btn-primary">My Places Page</button>
-        </a>
-      </main>
+        </a> */}
+      </main>  
+      </body>
     </Def>
   );
 }

@@ -46,6 +46,15 @@ main {
     margin-right: 20px;
     margin-left: 20px;
     background-color: white;
+    padding: 10px;
 }
 
-
+button{
+    display: inline;
+}
+label, input{
+    margin: 10px;
+}
+h3, div{
+    padding: 5px;
+}

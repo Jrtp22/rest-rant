@@ -6,7 +6,11 @@ const placeSchema = new mongoose.Schema({
     cuisines: { type: String, required: true },
     city: { type: String, default: 'Gotham City' },
     state: { type: String, default: 'Gotham' },
-    founded: Number
+    founded: {
+        type: Number,
+        min: [1673, 'dont lie its not older than 1673'],
+        max: [new Date().getFullYear(), 'we aint the future']
+    }
 })
 
 placeSchema.methods.showEstablished = function () {

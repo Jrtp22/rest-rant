@@ -8,23 +8,23 @@ function new_form() {
                 <h1>Add a New Place</h1>
                 <form method="POST" action="/places">
                     <div className="form-group">
-                        <label htmlFor="name">Place Name</label>
+                        <label htmlFor="name">Place Name:</label>
                         <input className="form-control" id="name" name="name" required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="pic">Place Picture</label>
+                        <label htmlFor="pic">Place Picture:</label>
                         <input className="form-control" id="pic" name="pic" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="city">City</label>
+                        <label htmlFor="city">City:</label>
                         <input className="form-control" id="city" name="city" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="state">State</label>
+                        <label htmlFor="state">State:</label>
                         <input className="form-control" id="state" name="state" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="cuisines">Cuisines</label>
+                        <label htmlFor="cuisines">Cuisines:</label>
                         <input
                             className="form-control"
                             id="cuisines"
@@ -33,14 +33,19 @@ function new_form() {
                         />
                     </div>
                     <div className="form-group">
-                        <label for="founded">Founded Year</label>
-                        <input className="form-control" id="founded" name="founded" />
+                        <label for="founded">Founded Year:</label>
+                        <input 
+                        type="number"
+                        className="form-control" 
+                        id="founded" 
+                        name="founded"
+                        value={new Date().getFullYear()} />
                     </div>
 
                     <input className="btn btn-primary" type="submit" value="Add Place" />
                 </form>
                 <a className="col d-flex justify-content-center" href="/places">
-                    <button className="btn btn-info">Go Back</button>
+                    <button className="btn btn-outline-primary">Go Back</button>
                 </a>
             </main>
         </Def>

@@ -24,10 +24,14 @@ router.get("/new", (req, res) => {
 //edit
 
 router.get('/:id/edit', (req, res) => {
-  res.render('places/edit' , {
-    data: places[req.params.id], 
-    index: req.params.id
+  db.Place.findById(req.params.id)
+  .then(place => {
+    res.render('places/edit', { place })
   })
+  .catch(err => {
+    console.log('err', err)
+    res.render('error404')
+})
 });
 
 router.get('/:id', (req, res) => {
@@ -56,7 +60,7 @@ router.post('/', (req, res) => {
 
 //update
 router.put('/:id', (req, res) => {
-  let id = Number(req.params.id);
+  let id = req.params.id;
   let updatedPlace = {...req.body};
   if (updatedPlace.image === ""){
     updatedPlace.image = "https://images.unsplash.com/photo-1571244112823-db09c790e924?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=9"
@@ -67,15 +71,20 @@ router.put('/:id', (req, res) => {
   if (updatedPlace.state === ""){
     updatedPlace.state = "Gotham"
   }
-  places[id] = updatedPlace;
-  res.redirect(`/places/${id}`)
+  db.Place.findByIdAndUpdate(id, updatedPlace, {new: true})
+  .then(updatePlace => {
+    res.redirect(`/places/${id}`)
+  })
 })
 
 //delete
 router.delete('/:id', (req, res) => {
-  let id = Number(req.params.id);
-  places.splice(id, 1);
-  res.status(303).redirect("/places")
+  let id = req.params.id;
+  db.Place.findByIdAndDelete(id)
+  .then(deletePlace => {
+    res.status(303).redirect('/places')
+  })
+
 })
 
 
