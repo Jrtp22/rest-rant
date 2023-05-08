@@ -17,18 +17,18 @@ function show(data, index) {
             <h3>{data.place.showEstablished()}</h3>
             <h4>Serving {data.place.cuisines}</h4>
           </div>
-          </div>
-          <div className="d-flex justify-content-between" >
+        </div>
+        <div className="d-flex justify-content-between" >
           <a href={`/places/${data.place.id}/edit`} >
-                <button className="btn btn-warning ">Edit</button>
-            </a>
-          <form method="POST"  action={`/places/${data.place.id}?_method=DELETE`}>
+            <button className="btn btn-warning ">Edit</button>
+          </a>
+          <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}>
             <button type="submit" className="btn btn-danger">
               Delete
             </button>
           </form>
-          </div>
-        
+        </div>
+
       </main>
     </Def>
   );
